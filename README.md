@@ -140,21 +140,26 @@ We have deployed a web application that's designed to test your Server. This is 
 
   - For the repo ***auth-api*** clicks => [here](https://github.com/shadykh/auth-api).
   - Pull Requests:
-    - [https://github.com/shadykh/auth-api/pull/8](https://github.com/shadykh/auth-api/pull/8)
+    - [https://github.com/shadykh/auth-api/pull/2](https://github.com/shadykh/auth-api/pull/2)
+    - GitHub actions:
+        - [https://github.com/shadykh/auth-api/runs/2680053839?check_suite_focus=true](https://github.com/shadykh/auth-api/runs/2680053839?check_suite_focus=true)
+        - [https://github.com/shadykh/auth-api/runs/2680055833?check_suite_focus=true](https://github.com/shadykh/auth-api/runs/2680055833?check_suite_focus=true)
+        - [https://github.com/shadykh/auth-api/runs/2680056537?check_suite_focus=true](https://github.com/shadykh/auth-api/runs/2680056537?check_suite_focus=true)
   - Local Tests:
     - ![Local Test test-v1](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-v1.PNG)
     - ![Local Test test-v2](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-v2.PNG)
     - ![Local Test test-router](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-router.PNG)
-    - ![Local Test test-coverage](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-coverage.PNG)
     - ![Local Test test-bearer-auth-middleware](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-bearer-auth-middleware.PNG)
     - ![Local Test test-basic-auth-middleware](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-basic-auth-middleware.PNG)
+    - ![Local Test test-coverage](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/test-coverage.PNG)
   - GitHub Tests:
     - ![github tests](https://raw.githubusercontent.com/shadykh/auth-api/main/assets/githubtests.PNG)
+
 
 - #### Heroku
 
   - For the link of the ***deployment main branch => `/` <= route***  clicks => [here](https://shady-auth-api.herokuapp.com/).
-
+  - For the link of the ***deployment branch => `/api/v1/food` <= route***  clicks => [here](https://shady-auth-api.herokuapp.com/api/v1/food).
 - #### Endpoints
 
   - `/signup` Return JSON objects
