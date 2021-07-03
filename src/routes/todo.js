@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const express = require('express');
 
-const DataManger = require('../models/data-collection-class.js');
+const DataManger = require('../models/data-collection.js');
 
 const TodoModel = require('../models/todo.js');
 
