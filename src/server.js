@@ -11,7 +11,7 @@ const notFound = require('./error-handlers/404.js');
 const authRoutes = require('./auth/routes.js');
 const v1Routes = require('./routes/v1.js');
 const v2Routes = require('./routes/v2.js');
-const todoRoutes = require('./routes/todo');
+
 
 // Prepare the express app
 const app = express();
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/v1', v1Routes);
 app.use('/api/v2', v2Routes);
-app.use('/api/favorite/todo', todoRoutes);
+
 app.use(authRoutes);
 
 // Catchalls
