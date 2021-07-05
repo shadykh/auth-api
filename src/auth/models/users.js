@@ -16,8 +16,8 @@ const users = new mongoose.Schema({
 users.virtual('token').get(function () {
   let tokenObject = {
     username: this.username,
-  }
-  return jwt.sign(tokenObject, process.env.SECRET)
+  };
+  return jwt.sign(tokenObject, process.env.SECRET);
 });
 
 users.virtual('capabilities').get(function () {
@@ -25,7 +25,7 @@ users.virtual('capabilities').get(function () {
     user: ['read'],
     writer:['read', 'create'],
     editor: ['read', 'create', 'update'],
-    admin: ['read', 'create', 'update', 'delete']
+    admin: ['read', 'create', 'update', 'delete'],
   };
   return acl[this.role];
 });
@@ -38,23 +38,23 @@ users.pre('save', async function () {
 
 // BASIC AUTH
 users.statics.authenticateBasic = async function (username, password) {
-  const user = await this.findOne({ username })
-  const valid = await bcrypt.compare(password, user.password)
+  const user = await this.findOne({ username });
+  const valid = await bcrypt.compare(password, user.password);
   if (valid) { return user; }
   throw new Error('Invalid User');
-}
+};
 
 // BEARER AUTH
 users.statics.authenticateWithToken = async function (token) {
   try {
     const parsedToken = jwt.verify(token, process.env.SECRET);
-    const user = this.findOne({ username: parsedToken.username })
+    const user = this.findOne({ username: parsedToken.username });
     if (user) { return user; }
-    throw new Error("User Not Found");
+    throw new Error('User Not Found');
   } catch (e) {
-    throw new Error(e.message)
+    throw new Error(e.message);
   }
-}
+};
 
 
 module.exports = mongoose.model('users', users);
